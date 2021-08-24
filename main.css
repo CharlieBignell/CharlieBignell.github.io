@@ -1,4 +1,106 @@
+
+/* GLOBAL/GENERAL */
+
 body {
-    background-image: url("bg/smalllines.png");
-    background-repeat: repeat-y repeat-x;
+    background-image: url("background.png");
+    margin: 0;
   }
+
+html, body{
+    height: 100%;
+}
+
+h1{
+    font-family: 'Baloo Thambi 2', serif;
+    margin: 30px 0 0 0;
+    color: #2b2b2b;
+  }
+
+p{
+  font-family: 'Roboto Slab', sans-serif;
+  color: #2b2b2b;
+}
+
+#content{
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 60%;
+    margin:auto;
+    background-color: white;
+    padding: 0 60px 0px 60px;
+    height: 100%;
+}
+
+#header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
+
+}
+
+#main{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/* TITLE */
+#title{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-right: 20px;
+    height: 100px;
+    align-items: center;
+}
+
+#title > h1{
+    font-size: 280%;
+    margin:0;
+    color: #2b2b2b;
+}
+
+#title :nth-child(1){
+    font-weight: 100;
+    margin-right: 10px;
+}
+
+
+/* NAVIGATION */
+#nav{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+
+button{
+    height: 50px;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 160%;
+    color: #2b2b2b;
+    background: none;
+    border: none;
+    margin-left: 90px;
+    cursor: pointer;
+}
+
+button:after {
+    transition: all ease-in-out .25s;
+    background: none repeat scroll 0 0 #2b2b2b;
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+}
+
+button:hover:after {
+    width: 100%;
+}
+
+/* DIVIDER */
+#divider{
+    height:4px;
+    border-radius: 5px;
+    width: 100%;
+    background-image: -webkit-linear-gradient(left, rgb(223, 70, 70), rgb(223, 198, 56), rgb(41, 136, 41), rgb(38, 108, 187), rgb(192, 74, 192));
+}
