@@ -10,6 +10,10 @@ html, body{
     height: 100%;
 }
 
+a{
+    text-decoration: none;
+}
+
 h1{
     font-family: 'Baloo Thambi 2', serif;
     margin: 30px 0 0 0;
@@ -19,6 +23,18 @@ h1{
 p{
   font-family: 'Roboto Slab', sans-serif;
   color: #2b2b2b;
+}
+
+#activePage{
+    cursor: default;
+}
+
+#activePage:after {
+    background: none repeat scroll 0 0 #2b2b2b;
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
 }
 
 #content{
