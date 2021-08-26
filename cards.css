@@ -22,8 +22,7 @@
     transition: all 0.2s ease-in-out;
     margin: 20px;
     cursor: pointer;
-
-  }
+}
   
   /* Create the hidden pseudo-element */
   /* include the shadow for the end state */
@@ -48,3 +47,21 @@
   .card:hover::after {
     opacity: 1;
   }
+
+
+/* #p1{
+    background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 94%);
+} */
+
+#p1{background-image: linear-gradient(315deg, #EF1313 0%, #AB2222 74%);}
+#p2{background-image: linear-gradient(315deg, #FEA305 0%, #D4972E 74%);}
+#p3{background-image: linear-gradient(315deg, #F1FE02 0%, #CBD428 74%);}
+#p4{background-image: linear-gradient(315deg, #40FE05 0%, #52BB32 74%);}
+#p5{background-image: linear-gradient(315deg, #1DDB69 0%, #1B8344 74%);}
+#p6{background-image: linear-gradient(315deg, #03FAFE 0%, #2FB2B4 74%);}
+#p7{background-image: linear-gradient(315deg, #01C7FE 0%, #2D7C92 74%);}
+#p8{background-image: linear-gradient(315deg, #0077FE 0%, #2466B3 74%);}
+#p9{background-image: linear-gradient(315deg, #0800FE 0%, #211E85 74%);}
+#p10{background-image: linear-gradient(315deg, #B302FE 0%, #891DAB 74%);}
+#p11{background-image: linear-gradient(315deg, #FE03D4 0%, #C8309D 74%);}
+#p12{background-image: linear-gradient(315deg, #FE0270 0%, #93195A 74%);}
