@@ -114,9 +114,40 @@ button:hover:after {
 }
 
 /* DIVIDER */
+/* #divider{
+    height:4px;
+    border-radius: 5px;
+    width: 100%;
+    background-image: -webkit-linear-gradient(left, 
+    #52BB32,
+    #1B8344,
+    #2FB2B4,
+    #2D7C92,
+    #2466B3,
+    #211E85,
+    #891DAB,
+    #C8309D,
+    #93195A,
+    #AB2222,
+    #D4972E,
+    #CBD428);
+} */
+
 #divider{
     height:4px;
     border-radius: 5px;
     width: 100%;
-    background-image: -webkit-linear-gradient(left, rgb(223, 70, 70), rgb(223, 198, 56), rgb(41, 136, 41), rgb(38, 108, 187), rgb(192, 74, 192));
+    background-image: -webkit-linear-gradient(left, 
+    #63c223,
+    #2cac47,
+    #26cc8c,
+    #03FAFE,
+    #01C7FE,
+    #007adf,
+    #5d25f8,
+    #c302fe,
+    #FE03D4,
+    #FE0270,
+    #EF1313,
+    #fc9637);
 }
