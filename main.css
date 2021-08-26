@@ -3,12 +3,12 @@
 
 body {
     background-image: url("background.png");
-    margin: 0;
+    margin: 0, 0 , 20px, 0;
   }
 
-html, body{
+/* html, body{
     height: 100%;
-}
+} */
 
 a{
     text-decoration: none;
