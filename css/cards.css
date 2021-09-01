@@ -9,7 +9,7 @@
     position: relative;
     display: inline-block;
     width: 300px;
-    height: 200px;
+    height: 240px;
     border-radius: 5px;
     background-color: #fff;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -46,10 +46,19 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
+.card>h4 {
+    font-size: 1.5em;
+    font-family: 'Baloo Thambi 2', serif;
+    margin: 0;
+    text-align: center;
+    font-weight: 200;
+    color: white;
+}
+
 .card>p {
     color: white !important;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 /* Scale up the box */

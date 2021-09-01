@@ -13,15 +13,19 @@ a {
     text-decoration: none;
 }
 
-h1 {
+h1, h2 {
     font-family: 'Baloo Thambi 2', serif;
-    color: #2b2b2b;
+    color: #333333;
     margin:0;
+}
+
+h2{
+    color: rgb(87, 87, 87);
 }
 
 p {
     font-family: 'Roboto Slab', sans-serif;
-    color: #2b2b2b;
+    color: #333333;
 }
 
 #activePage {
@@ -119,4 +123,18 @@ button:hover:after {
     width: 100%;
     margin-bottom: 40px;
     background-image: -webkit-linear-gradient(left, #63c223, #2cac47, #26cc8c, #03FAFE, #01C7FE, #007adf, #5d25f8, #c302fe, #FE03D4, #FE0270, #EF1313, #fc9637);
+}
+
+/* Project Page */
+#projectTitle{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#backBtn{
+    font-family: 'Baloo Thambi 2', serif;
+    font-size: 2em;
+    margin: 0;
+    font-weight: 900;
+    /* color: rgb(100, 100, 100); */
 }
