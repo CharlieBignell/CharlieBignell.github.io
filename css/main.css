@@ -1,31 +1,30 @@
-
 /* GLOBAL/GENERAL */
 
 body {
-    background-image: url("background.png");
-    margin: 0, 0 , 20px, 0;
-  }
+    background-image: url("../img/background.png");
+    margin: 0, 0, 20px, 0;
+}
 
 /* html, body{
     height: 100%;
 } */
 
-a{
+a {
     text-decoration: none;
 }
 
-h1{
+h1 {
     font-family: 'Baloo Thambi 2', serif;
-    margin: 30px 0 0 0;
     color: #2b2b2b;
-  }
-
-p{
-  font-family: 'Roboto Slab', sans-serif;
-  color: #2b2b2b;
+    margin:0;
 }
 
-#activePage{
+p {
+    font-family: 'Roboto Slab', sans-serif;
+    color: #2b2b2b;
+}
+
+#activePage {
     cursor: default;
 }
 
@@ -37,31 +36,31 @@ p{
     width: 100%;
 }
 
-#content{
+#content {
     display: flex;
     flex-flow: column nowrap;
     max-width: 60%;
-    margin:auto;
+    margin: auto;
     background-color: white;
     padding: 0 60px 0px 60px;
     height: 100%;
 }
 
-#header{
+#header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     margin: 20px 0 20px 0;
-
 }
 
-#main{
+#main {
     display: flex;
     flex-flow: column nowrap;
 }
 
 /* TITLE */
-#title{
+
+#title {
     display: flex;
     flex-flow: row nowrap;
     margin-right: 20px;
@@ -69,27 +68,26 @@ p{
     align-items: center;
 }
 
-#title > h1{
+#title>h1 {
     font-size: 280%;
-    margin:0;
+    margin: 0;
     color: #2b2b2b;
 }
 
-#title :nth-child(1){
+#title :nth-child(1) {
     font-weight: 100;
     margin-right: 10px;
 }
 
-
 /* NAVIGATION */
-#nav{
+
+#nav {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 }
 
-
-button{
+button {
     height: 50px;
     font-family: 'Roboto Slab', sans-serif;
     font-size: 160%;
@@ -114,40 +112,11 @@ button:hover:after {
 }
 
 /* DIVIDER */
-/* #divider{
-    height:4px;
-    border-radius: 5px;
-    width: 100%;
-    background-image: -webkit-linear-gradient(left, 
-    #52BB32,
-    #1B8344,
-    #2FB2B4,
-    #2D7C92,
-    #2466B3,
-    #211E85,
-    #891DAB,
-    #C8309D,
-    #93195A,
-    #AB2222,
-    #D4972E,
-    #CBD428);
-} */
 
-#divider{
-    height:4px;
+#divider {
+    height: 4px;
     border-radius: 5px;
     width: 100%;
-    background-image: -webkit-linear-gradient(left, 
-    #63c223,
-    #2cac47,
-    #26cc8c,
-    #03FAFE,
-    #01C7FE,
-    #007adf,
-    #5d25f8,
-    #c302fe,
-    #FE03D4,
-    #FE0270,
-    #EF1313,
-    #fc9637);
+    margin-bottom: 40px;
+    background-image: -webkit-linear-gradient(left, #63c223, #2cac47, #26cc8c, #03FAFE, #01C7FE, #007adf, #5d25f8, #c302fe, #FE03D4, #FE0270, #EF1313, #fc9637);
 }
