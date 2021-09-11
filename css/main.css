@@ -23,7 +23,7 @@ h2{
     color: rgb(87, 87, 87);
 }
 
-p {
+p, ol, li {
     font-family: 'Roboto Slab', sans-serif;
     color: #333333;
 }
@@ -94,7 +94,7 @@ p {
 button {
     height: 50px;
     font-family: 'Roboto Slab', sans-serif;
-    font-size: 160%;
+    font-size: 150%;
     color: #2b2b2b;
     background: none;
     border: none;
@@ -137,4 +137,13 @@ button:hover:after {
     margin: 0;
     font-weight: 900;
     /* color: rgb(100, 100, 100); */
+}
+
+#main > p > a{
+    text-decoration: underline;
+    /* font-weight: bold; */
+}
+
+#main > p {
+    margin: 10px 0px 10px 0px;
 }
