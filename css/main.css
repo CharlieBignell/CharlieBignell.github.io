@@ -2,24 +2,23 @@
 
 body {
     background-image: url("../img/background.png");
-    margin: 0, 0, 20px, 0;
 }
 
 /* html, body{
     height: 100%;
 } */
 
-a {
+#header > a, #projectTitle > a {
     text-decoration: none;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'Baloo Thambi 2', serif;
     color: #333333;
-    margin:0;
+    margin: 0;
 }
 
-h2{
+h2 {
     color: rgb(87, 87, 87);
 }
 
@@ -126,12 +125,13 @@ button:hover:after {
 }
 
 /* Project Page */
-#projectTitle{
+
+#projectTitle {
     display: flex;
     flex-flow: row nowrap;
 }
 
-#backBtn{
+#backBtn {
     font-family: 'Baloo Thambi 2', serif;
     font-size: 2em;
     margin: 0;
@@ -139,11 +139,6 @@ button:hover:after {
     /* color: rgb(100, 100, 100); */
 }
 
-#main > p > a{
-    text-decoration: underline;
-    /* font-weight: bold; */
-}
-
-#main > p {
+#main>p {
     margin: 10px 0px 10px 0px;
 }
