@@ -4,11 +4,29 @@ body {
     background-image: url("../img/background.png");
 }
 
-/* html, body{
-    height: 100%;
+
+/* @media (max-width:1024px){
+    p{
+        color: red !important;
+    }
+}
+
+@media (min-width:1025px){
+    p{
+        color: blue !important;
+    }
 } */
 
-#header > a, #projectTitle > a {
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 100%;               
+    background-color:lightgrey;
+    height: 1px;
+    margin: 20px 0px 20px 0px;
+  }
+header > a, #projectTitle > a {
     text-decoration: none;
 }
 
@@ -49,7 +67,7 @@ p, ol, li {
     height: 100%;
 }
 
-#header {
+header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -84,7 +102,7 @@ p, ol, li {
 
 /* NAVIGATION */
 
-#nav {
+nav {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
