@@ -9,7 +9,6 @@
     <title>Charlie Bignell</title>
 
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/cards.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -19,28 +18,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap" rel="stylesheet">
-
-    <!-- <script src="collapse.js"></script> -->
-
 </head>
 
-<body class="no-js">
+<body>
     <div id="content">
         <header>
-            <a href='./index.html'>
-                <div id="title">
-                    <H1>Charlie</H1>
-                    <H1>Bignell</H1>
-                </div>
-            </a>
-
             <nav>
-                <button id='activePage'>Home</button>
-                <a href='./About.html'><button>About Me</button></a>
-                <a href='./Projects.html'><button>Projects</button></a>
+                <a href='./index.html'>
+                    <div id="title">
+                        <H1>Charlie</H1>
+                        <H1>Bignell</H1>
+                    </div>
+                </a>
+
+                <ul class="nav-menu">
+                   
+                    <li>
+                        <button id='activePage'>Home</button>
+                    </li>
+                    <li>
+                        <a href='./About.html'><button>About Me</button></a>
+                    </li>
+                    <li>
+                        <a href='./Projects.html'><button>Projects</button></a>
+                    </li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
             </nav>
 
         </header>
+
+
         <div id="divider"></div>
 
         <div id="main">
@@ -82,6 +96,8 @@
             <p>Enjoy!</p>
         </div>
     </div>
+    <script src="collapse.js"></script>
+
 </body>
 
 </html>

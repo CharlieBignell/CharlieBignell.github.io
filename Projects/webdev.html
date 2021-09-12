@@ -9,7 +9,6 @@
     <title>Charlie Bignell - Web Dev</title>
 
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/cards.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
@@ -24,17 +23,33 @@
 <body>
     <div id="content">
         <header>
-            <a href='../index.html'>
-                <div id="title">
-                    <H1>Charlie</H1>
-                    <H1>Bignell</H1>
-                </div>
-            </a>
-
             <nav>
-                <a href='../index.html'><button>Home</button></a>
-                <a href='../About.html'><button>About Me</button></a>
-                <a href='../Projects.html'><button>Projects</button></a>
+                <a href='../index.html'>
+                    <div id="title">
+                        <H1>Charlie</H1>
+                        <H1>Bignell</H1>
+                    </div>
+                </a>
+
+                <ul class="nav-menu">
+                   
+                    <li>
+                        <a href='../index.html'><button>Home</button></a>
+                    </li>
+                    <li>
+                        <a href='../About.html'><button>About Me</button></a>
+                    </li>
+                    <li>
+                        <a href='../Projects.html'><button>Projects</button></a>
+                    </li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
             </nav>
 
         </header>
@@ -87,6 +102,7 @@
 
     </div>
     </div>
+    <script src="../collapse.js"></script>
 
 </body>
 
