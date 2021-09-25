@@ -1,4 +1,5 @@
 /* GENERAL */
+
 body {
     background-image: url("../img/background.png");
 }
@@ -97,7 +98,6 @@ ul {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    /* width: 100%; */
 }
 
 .nav-menu {
@@ -174,7 +174,6 @@ button:hover:after {
     font-size: 2em;
     margin: 0;
     font-weight: 900;
-    /* color: rgb(100, 100, 100); */
 }
 
 #main>p {
@@ -183,12 +182,12 @@ button:hover:after {
 
 /* MOBILE */
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1200px) {
     .nav-menu {
         position: fixed;
         top: -300px;
         right: 1%;
-        transition: 0.5s !important;
+        transition: 0.5s;
         flex-direction: column;
         background-color: #fff;
         text-align: center;
@@ -222,7 +221,6 @@ button:hover:after {
     }
     body {
         background-image: none;
-        /* background-color: blue; */
     }
     body.activeHam {
         overflow: hidden;

@@ -6,7 +6,6 @@ const body = document.querySelector("body");
 hamburger.addEventListener("click", mobileMenu);
 
 function mobileMenu() {
-    console.log("toggle")
     hamburger.classList.toggle("activeHam");
     navMenu.classList.toggle("activeHam");
     divider.classList.toggle("activeHam");
