@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Charlie Bignell - Web Dev</title>
+    <title>Charlie Bignell - Tagger</title>
 
     <link rel="stylesheet" href="../css/main.css">
 
@@ -64,41 +64,70 @@
 
             <h1>Tagger - A Java 'Cheatsheet'</h1>
             <h2>October 2021</h2>
-            <p>Tagger is a organisation system is built on the concept of 'tagging' songs, and allows the user to create
+            <p>Tagger is a music library organisation system is built on the concept of 'tagging' songs, which allows
+                the user to create
                 and edit playlists easily by specifying tags to include. It's an idea I had recently, after getting
-                bored of my Spotify playlists. I thought it'd be easier if I could somehow bulk add/remove certain
-                songs, rather than go through them one-by-one.
-
+                bored of my Spotify playlists. I wanted a method of bulk adding/removing songs that may seem unrelated
+                (e.g. different artists or genres), but they're related in my mind (e.g. songs I want to listen to at
+                the gym). I thought if I could spend time tagging each song in my library, I could add and remove tags
+                to create/edit playlists quickly and easily, without needing to go through them all individually. I
+                don't see this as some kind of revelotionary new idea, but it seemed like a decent enough concept to try
+                out in this project.
             </p>
-            <p>I only implemented the very basics here, but I had many ideas on how to build on this to create a
-                powerful system capable of generating large playlists on-the-fly based on complex user-input. I'll go
-                into more detail on this in the 'Future Plans' section, but for now I just implemented a basic system
-                capable of adding and removing songs/albums with the ability to 'tag' songs with anything the user
-                likes. They can then specify one or more 'tags' to play.</p>
 
+            <h3>Why?</h3>
             <p>The purpose of this project was for me to re-fresh my memory of Java, as it used to be the progamming
                 language I was most comfortable with but I hadn't used it for a couple of years before this. So to get
                 me back up to speed, I decided to write a little program and try to cram-in as many different
                 programming concepts as possible. In doing this, a few redundencies appeared, and certain aspects aren't
-                implemented with efficiency in mind. Ultimately, I was using the tagging idea as a vessel to try out
-                lots of concepts in Java, and not necessarily implement a perfect system.Below are just a few of them:
-            </p>
+                implemented with efficiency in mind. I'll talk more about that in 'Future Plans'.</p>
+
+            <h3>How?</h3>
+            <p> I also used this as an opportunity to learn how <a href="https://maven.apache.org/">Maven</a> works.
+                Maven is a build automation tool that simplifies the process of writing programs, primarily Java
+                programs. Up until this project, I had only written Java programs using <a
+                    href="https://www.eclipse.org/downloads/">Eclipse</a>, which is an IDE made especially for Java/C
+                projects. It's a really useful tool, but to avoid being forever tied to Eclipse, I decided to use Maven
+                with my standard code editor (<a href="https://code.visualstudio.com/">VSCode</a>) for this project.</p>
+
+            <h3>What?</h3>
+            <p>I only implemented the very basics here, but I had many ideas on how to build on this to create a
+                powerful system capable of generating large playlists on-the-fly based on complex user-input. I'll go
+                into more detail on this in 'Future Plans', but for now I just implemented a basic system
+                capable of adding and removing songs/albums with the ability to 'tag' songs with anything the user
+                likes. The user can then specify one or more 'tags' to play.</p>
+            <p> Ultimately, I was using the tagging idea as a vessel to <strong>try out lots of different concepts in
+                    Java, and not
+                    necessarily implement a perfect system</strong>. Here are a few
+                different concepts I integrated:
             </p>
 
             <ul>
-                <li><strong>Abstraction</strong><br></li>
-                <li><strong>Inheritance</strong><br></li>
-                <li><strong>Singleton</strong><br></li>
-                <li><strong>Generics</strong><br></li>
-                <li><strong>Exceptions</strong><br></li>
+                <li><strong>Abstraction and Inheritance</strong><br> One of the first things I learnt at University was
+                    the concept of
+                    the 'Four Pillars of Object Oriented Programming', and I wanted to ensure they were utilised here.
+                    For
+                    inheritance, I made an 'Audio' superclass that the 'Song' class inherits from. I didn't go further
+                    to create other forms of audio, but the structure could be used to create other types such as
+                    podcasts and audiobooks. For abstraction, I made an interface called 'Tracklist', that both 'Album'
+                    and 'Playlist' implement. The inheritance of Audio is useful for creating outher forms, however the
+                    abstraction of Tracklist probably isn't necessary. In regards to the remaing two 'pillars',
+                    encapsulation comes naturally with Java, and so does polymorphism if inheritance is involved.
+                </li>
+                <li><strong>Generics</strong><br>One benefit of unnecessarily abstracting 'Tracklist', was that it forced
+                    me to confront a concept I never got to grips with at University - generics. In revisting this concept, it
+                    wasn't as complicated as I remember and was quite simple to implement. A
+                    Tracklist is built with either a list of Songs (for albums), or a list of tags (for playlists).
+                </li>
                 <li><strong>Junit testing</strong><br></li>
                 <li><strong>File IO</strong><br></li>
+                <li><strong>Singleton</strong><br></li>
             </ul>
 
-            <p>I also included evidence of polymorphism, encapsulation, method overloading, overriding, console IO, </p>
+            <p>I also included evidence of polymorphism, encapsulation, exception handling (checked and unchecked), method overloading and overriding, console IO, and probably others I've forgotten to mention.</p>
 
 
-            <p><a href="https://github.com/CharlieBignell/CharlieBignell.github.io" target="_blank">View the code
+            <p><a href="https://github.com/CharlieBignell/Tagger" target="_blank">View the code
                     here</a></p><br>
             <h3>Future Plans</h3>
             <p></p>

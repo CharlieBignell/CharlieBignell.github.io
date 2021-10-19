@@ -94,12 +94,6 @@ header {
     list-style: none;
 }
 
-ul {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-}
-
 .nav-menu {
     display: flex;
     flex-flow: row nowrap;
