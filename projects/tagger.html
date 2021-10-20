@@ -114,23 +114,62 @@
                     abstraction of Tracklist probably isn't necessary. In regards to the remaing two 'pillars',
                     encapsulation comes naturally with Java, and so does polymorphism if inheritance is involved.
                 </li>
-                <li><strong>Generics</strong><br>One benefit of unnecessarily abstracting 'Tracklist', was that it forced
-                    me to confront a concept I never got to grips with at University - generics. In revisting this concept, it
+                <li><strong>Generics</strong><br>One benefit of unnecessarily abstracting 'Tracklist', was that it
+                    forced
+                    me to confront a concept I never got to grips with at University - generics. In revisting this
+                    concept, it
                     wasn't as complicated as I remember and was quite simple to implement. A
                     Tracklist is built with either a list of Songs (for albums), or a list of tags (for playlists).
                 </li>
-                <li><strong>Junit testing</strong><br></li>
-                <li><strong>File IO</strong><br></li>
-                <li><strong>Singleton</strong><br></li>
+                <li><strong>JUnit testing</strong><br>
+                    I included some JUnit tests for the basic class methods, but overall my testing on this project was
+                    far from extensive. basic tests for tasks like getters and setters are included to refresh my memory
+                    on how JUnit test are completed, but I didn't spend too much time writing more complex tests for
+                    things ensuring like the correct exceptions being thrown in certain scenarios.
+                </li>
+                <li><strong>File IO</strong><br>
+                    In my original design, a Playlist would only keep track of a list of tags, and so in order to 'play'
+                    the right songs I had a CSV file to keep track of the songs and their tags. This ended up being more
+                    complicated than necessary, so I added in a 'Library' class to hold the songs. But the use of the
+                    CSV input remained as a way of initialising a Library with a set of songs when it's first created.
+                </li>
+                <li><strong>Singleton</strong><br>
+                    After adding in the Library class, I thought it'd be a good opportunity to implement a singleton
+                    pattern, as there should never be a need to initialise multiple Library instances.
+                </li>
             </ul>
 
-            <p>I also included evidence of polymorphism, encapsulation, exception handling (checked and unchecked), method overloading and overriding, console IO, and probably others I've forgotten to mention.</p>
+            <p>I also included examples of polymorphism, encapsulation, exception handling (checked and unchecked),
+                method overloading and overriding, console IO, and probably others I've forgotten to mention.</p>
 
-
+            <h3>Future Plans</h3>
+            <p>As I mentioned earlier, there are some redundencies and minor issues with the completed codebase. Some of
+                these include:</p>
+            <ul>
+                <li>There are a few very similar methods in the Library class that could possibly be merged with the use
+                    of generics</li>
+                <li>There is currently only the Song class that inherits from the Audio class, rendering this use of
+                    inheritance redundant</li>
+                <li>Initialising albums is a bit cumbersome, as the user needs to add each song individually first, then
+                    specify which songs belong to the album</li>
+                <li>Inputs are not sanitised</li>
+                <li>The testing is not extensive enough, and I only realised late in the project that I was using JUnit4 and not JUnit5.</li>
+            </ul>
+            <p>I'd like to fix these issues in the future if I get time.</p>
+            <p>There are also more features I'd like to have implemented, these include:</p>
+            <ul>
+                <li>More complex playlist creation involving basic logic e.g. tag1 AND tag2 NOT tag3 </li>
+                <li>Add the ability to shuffle a playlist or define a specific order</li>
+                <li>Add a time-dimension to the data e.g. date song added, date tag added to song/playlist</li>
+                <li>Add more forms of audio e.g. podcast, audiobook</li>
+                <li>Include pre-defined genres using an enumeration</li>
+                <li>Implement a GUI to replace the console menu</li>
+            </ul>
+            <p>I'm not sure if I'll spend time including these extra features, but perhaps I will if I revist the
+                project to fix the issues mentioned earlier. Overall, this project was a success in that it refreshed my
+                memory of Java, along with some key language-agnostic concepts and design patterns.</p>
             <p><a href="https://github.com/CharlieBignell/Tagger" target="_blank">View the code
                     here</a></p><br>
-            <h3>Future Plans</h3>
-            <p></p>
         </div>
 
 
