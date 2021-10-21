@@ -141,6 +141,13 @@
 
             <p>I also included examples of polymorphism, encapsulation, exception handling (checked and unchecked),
                 method overloading and overriding, console IO, and probably others I've forgotten to mention.</p>
+            <br>
+            <div id="taggerImgDiv">
+                <img class="taggerImg" src="../img/UML.drawio.png">
+                <img class="taggerImg" src="../img/console.png">
+            </div>
+            <p id="taggerImgSub"><em>A UML diagram (left), and the console menu (right)</em></p>
+            <br>
 
             <h3>Future Plans</h3>
             <p>As I mentioned earlier, there are some redundencies and minor issues with the completed codebase. Some of
@@ -152,8 +159,11 @@
                     inheritance redundant</li>
                 <li>Initialising albums is a bit cumbersome, as the user needs to add each song individually first, then
                     specify which songs belong to the album</li>
+                <li>In creating the Library class, it became much easier to play songs with a given tag through this
+                    class rather than the Playlist class, rendering Playlist redundant.</li>
                 <li>Inputs are not sanitised</li>
-                <li>The testing is not extensive enough, and I only realised late in the project that I was using JUnit4 and not JUnit5.</li>
+                <li>The testing is not extensive enough, and I only realised late in the project that I was using JUnit4
+                    and not JUnit5.</li>
             </ul>
             <p>I'd like to fix these issues in the future if I get time.</p>
             <p>There are also more features I'd like to have implemented, these include:</p>
