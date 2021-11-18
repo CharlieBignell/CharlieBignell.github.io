@@ -1,0 +1,248 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Charlie Bignell - Web Dev</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <nav>
+                <a href='/'>
+                    <div id="title">
+                        <H1>Charlie</H1>
+                        <H1>Bignell</H1>
+                    </div>
+                </a>
+
+                <ul class="nav-menu">
+
+                    <li>
+                        <a href='/'><button>Home</button></a>
+                    </li>
+                    <li>
+                        <a href='../about'><button>About Me</button></a>
+                    </li>
+                    <li>
+                        <a href='../projects'><button>Projects</button></a>
+                    </li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+            </nav>
+
+        </header>
+        <div id="divider"></div>
+
+        <div id="main">
+            <div id="projectTitle">
+                <a href="../projects">
+                    <p id="backBtn">&lt; Back</p>
+                </a>
+            </div>
+
+            <h1>Project III: Data Science</h1>
+            <h2>November 2021</h2>
+            <p>At the time of writing I work as a data analyst, so I found this project much easier to get into quickly.
+                The goal was to
+                take data I recieved from my stock broker, clean it up, and extract some insights. My intention is that
+                the next few projects will follow
+                on from each other, so next month I'll design a UI to visualise this data. Then I plan to build a
+                Node/React web
+                app to host it, and implement the designed UI using D3.js.</p>
+            <p>I chose to use <a href="https://jupyter.org/">Jupyter Notebooks</a> instead of normal Python files after
+                they were recommended to me by a colleague as the segmentation of the code into cells makes it easier to
+                build-up complex programs. This worked really well, and there was a speed advantage too, as lengthy
+                tasks such as retrieving stock market data only had to be executed once.
+            I also made heavy use of <a href="https://pandas.pydata.org/docs/index.html">Pandas</a>, as it's a
+                library I've been meaning to learn for a while now and it's perfectly suited for a data-heavy project such as this.</p>
+            <p>The project has three Python notebook files, each with a distinct function.</p><br>
+            <h3>Cleanup.pynb</h3>
+            <p>The broker I use is called Freetrade. They provide transactional data in the form of a single CSV with
+                the following columns:</p>
+            <ul>
+                <li><strong>Value Date</strong>: Date of transaction</li>
+                <li><strong>Type</strong>: Type of transaction e.g. deposit, buy, sell, etc.</li>
+                <li><strong>Details</strong>: Text explanation of transaction e.g. '1.5 Tesla Motors Inc (US88160R1014)
+                    @ USD 615.10000 (@ 1 USD = 1.38887 GBP) on 04-Mar-2021 20:30:26'
+                </li>
+                <li><strong>Value</strong>: The amount bought/sold/given in GBP. It's signed i.e. outgoings are negative
+                </li>
+            </ul>
+            <p>Although it contains all the data I need, most of the uesful data is packed into the string contained in
+                the 'details' column. This gave me an opportunity to face another area I have always struggled with -
+                regular expressions. They still look like hieroglyphics to me, but at least I now feel confident
+                building
+                complex regular expressions (as long as I have access to <a href="https://regexr.com/">regexr.com</a>).
+            </p>
+            <p>Cleanup.ipynb serves to extract all the useful information from this CSV file and
+                export it into three files:</p>
+            <ul>
+                <li><strong>basic.csv</strong>: All buys/sells with the columns Date, Type, Value, ShareCount, FXRate,
+                    Name, and Currency. Most analyses only require buys and sells, so it made sense to group them into
+                    a dedicated file.
+                </li><br>
+                <li><strong>dividend.csv</strong>: All dividend payments with the columns Date, Value, and Name. This is
+                    similar to <i>other.csv</i> below, but a dividend transaction is tied to a specific company, whereas
+                    all
+                    other transactions aren't.
+                </li><br>
+                <li><strong>other.csv</strong>: All other transactions e.g. interest, fx fee, deposits etc. with the
+                    columns Date, Value, and Type
+                </li>
+            </ul>
+            <p>This file won't be of much use to anyone who isn't trying to clean up transactional data specifically
+                from Freetrade, but it was necessary on my part in order to make the next two parts much less painful.
+            </p><br>
+
+            <h3>Analyse.pynb</h3>
+            <p>The next part wasw to take this cleaned data, and produce some basic insights. I plan to add more useful
+                outputs in the future, but that'll come after I've designed the UI and done a bit more research into the
+                different ways to analyse portoflio performance. The file reads data in the format exported from
+                <i>cleanup.ipynb</i> as described above, and plots a basic value chart (+ rolling average curves) along
+                woth some basic calculations and summaries printed to the console. It also outputs more detailed summary
+                tables to CSV files
+            </p>
+            <p>The plots are very basic and don't look too pretty, but these plots only serve as a visual check to see
+                if the calculations look right. In the future, I'll be using D3.js to make interactive graphs from this
+                data.</p>
+            <br>
+            <div id="imgDiv">
+                <img class="img" src="../img/graph.png">
+                <img class="img" src="../img/console_datascience.png">
+            </div>
+            <p id="imgSub"><em>A graph of daily value + 60 day rolling average (left), and a snippet of the console
+                    summary output (right). Both using synthetic data.</em></p>
+            <br>
+
+            <h3>Synthesise.pynb</h3>
+            <p>There were a few reasons for generating synthetic versions of the required input datasets. For one, I
+                wanted to be able to show some outputs here on this page, and in the code on GitHub, but I didn't want
+                to use my own
+                trading data. Secondly, it's useful to test my systems (both the current <i>analyse.pynb</i> and
+                any future system) using a more complex dataset where I could enter extreme values e.g. 50 years+ of
+                data, or extremely high deposit amounts. Lastly, generating 'realistic' synthetic data is something I'm
+                currently doing at work, so I thought it'd be a useful skill to hone.</p>
+            <p>
+                The file takes a number of input parameters, and outputs fake data in the format described at the end of
+                the <i>cleanup</i> section above. These parameters are:
+            </p>
+            <ul>
+                <li><strong>Start and End Date</strong>: The date range to synthesise transactions over.</li>
+                <li><strong>Deposit Amount</strong>: The total amount of money to trade with.</li>
+                <li><strong>Deposit Number</strong>: The number of individual deposits to spread 'deposit amount' over.
+                </li>
+                <li><strong>FX Rate</strong>: To simplify things, rather than using the correct fx rate at the time of
+                    each transaction, a basic fx rate (USD-GBP) is hard-coded and applied to all transactions.
+                </li>
+                <li><strong>Buy Number</strong>: The number of 'buy' transactions to simulate.
+                </li>
+                <li><strong>Man/Max Spend</strong>: The minimum and maximum percentage (between 0-1) of the current cash
+                    balance to spend when generating a buy. Higher max = spend more per buy = more sells (see below).
+                    Wider range = more 'noisy' buy values.
+                </li>
+                <li><strong>Max Sell</strong>: The maximum percentage (between 0-1) of the current portfolio to sell at
+                    any given sell transaction. Sells are currently used to add cash when a 'buy' is not possible due to
+                    lack of funds. Therefore the higher this number, the fewer (but larger) sells there will be.
+                </li>
+                <li><strong>Tickers</strong>: The companies to buy/sell. I chose two different companies each from the
+                    sectors technology, food, energy, finance, health, along with two ETFs.
+                </li>
+            </ul>
+            <p>From this, deposits are randomly generated on dates spread out throughout the date range, then buys are
+                generated. When a buy isn't possible due to a lack of funds, a sell is generated to free up some cash to
+                buy with. My original plan was to be a bit more intelligent with this, and allow the user to specify the
+                number of sells. However, I ran into an issue - either you generate the buys then the sells or you
+                generate the buys and sells at the same time. The issue with the former is that you'll be left with a
+                lot of unspent cash at the end, and the latter is more complex to implement than expected. So instead I
+                tried
+                generating half the buys, then all the sells, then the second half of the buys.
+            </p>
+            <p>In trying to
+                solve this issue, I came to realise that the intention here is to balance randomness and uniformity. We
+                want to use randomness to introduce 'noise', as real-world data will inevitably be noisy. However, we
+                also want the
+                deposits, buys, and sells to be somewhat evenly distributed throughout the date range. My
+                half-and-half solution is both too uniform and too complex. I had another idea to assign weights to
+                'buy', 'sell' and 'deposit', and to alter the weights after each transaction based on the current
+                portoflio e.g. if there was little cash left, increase the chances of generating a deposit by increasing
+                it's weight. This solves the issue of uniformity, but was still a bit too complicated for my liking.
+            </p>
+            <p>I
+                ended up settling for the following: randomly generate deposits, then generate buys incrementally based
+                on the amount of cash we have, if we don't have enough then generate a sell. I think this is a good
+                balance of random/uniform, and it isn't unrealistic for a person to act this way when trading either. It
+                also made the implementeation much simpler. However, one downside is that I had to remove the ability to
+                specify how many sells to include. I didn't see this as a major issue though, as the purpose of this
+                project is
+                to track long-term growth portfolio, of which there shouldn't be an emphasis on selling.</p>
+
+
+
+            <p><a href="https://github.com/CharlieBignell/DataScience-StockMarket" target="_blank">View the code
+                    here</a></p><br>
+
+            <h3>Future Plans</h3>
+            <p>I have a number of improvements in mind, and I spotted some minor issues as I was finalising the code at
+                the end of
+                this project. I plan to work on them when I revist this code later.</p>
+            <ul>
+                <li>To optimse the retrieval of data, I only get historical data from the date of the first buy to the
+                    date of the last sell (if it's not currently being held). However, to optimise this further and add
+                    some future-proofing, I should save the historcial data locally so I don't need to request the full
+                    amount
+                    every run.</li>
+                <li>I read online that you shouldn't build-up a pandas dataframe incrementally e.g. using a loop.
+                    Instead, you should
+                    generate the data in regular Python lists and convert it to a dataframe at the end. I stuck with
+                    this, but it has resulted in some cumbersome lines of code with many 'append' statements. This is
+                    probably due to the fact that I built-up my dataframes using a separate list for each column of
+                    data. This works for dataframes with a couple of columns, but is probably too long-winded for larger
+                    dataframes so could be streamlined.</li>
+                <li>Another thing I read online was that you should never (unless absolutely necessary) loop through a
+                    dataframe row-by-row. I did this once, in the very early stages of this project, and only spotted it
+                    right at the end.</li>
+                <li>I noticed myself writing very similar code to find the most recent valid value multiple times. For
+                    example, if I was trying to get the price of a certain stock on a given day but there wasn't data
+                    for that day, try the previous day and repeat until we get a value. I
+                    always try and follow the 'DRY' (don't repeat yourself) principle, so I plan to abstract this
+                    process into a function in future.</li>
+                <li>In the early phases, I used company name rather than ticker symbol. This has led to some dataframe
+                    columns being called 'Name' and others named 'Ticker' even though they now all feature ticker
+                    symbols. Naming should be consistent, so I'll fix this later.</li>
+                <li>There was an issue with a couple of companies I've traded (PFE and INRG.L) that caused me to add a
+                    lazy, hard-coded fix in <i>cleanup.pynb</i>.</li>
+            </ul>
+
+
+        </div>
+
+
+    </div>
+    </div>
+    <script src="../collapse.js"></script>
+
+</body>
+
+</html>

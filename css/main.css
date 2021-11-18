@@ -174,18 +174,18 @@ button:hover:after {
     margin: 10px 0px 10px 0px;
 }
 
-/* TAGGER PAGE */
-.taggerImg{
+.img{
     width: 50%;
+    /* height: 50%; */
 }
 
-#taggerImgDiv{
+#imgDiv{
     display: flex;
     flex-flow: row wrap;
 
 }
 
-#taggerImgSub{
+#imgSub{
     text-align: center;
 }
 
