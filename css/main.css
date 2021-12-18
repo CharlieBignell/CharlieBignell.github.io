@@ -179,10 +179,14 @@ button:hover:after {
     /* height: 50%; */
 }
 
+.img_single{
+    width: 80%;
+}
+
 #imgDiv{
     display: flex;
     flex-flow: row wrap;
-
+    justify-content: center;
 }
 
 #imgSub{
