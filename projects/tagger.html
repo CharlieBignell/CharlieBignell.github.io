@@ -76,10 +76,10 @@
             </p>
 
             <h3>Why?</h3>
-            <p>The purpose of this project was for me to re-fresh my memory of Java, as it used to be the progamming
+            <p>The purpose of this project was for me to re-fresh my memory of Java, as it used to be the programming
                 language I was most comfortable with but I hadn't used it for a couple of years before this. So to get
                 me back up to speed, I decided to write a little program and try to cram-in as many different
-                programming concepts as possible. In doing this, a few redundencies appeared, and certain aspects aren't
+                programming concepts as possible. In doing this, a few redundancies appeared, and certain aspects aren't
                 implemented with efficiency in mind. I'll talk more about that in 'Future Plans'.</p>
 
             <h3>How?</h3>
@@ -109,13 +109,13 @@
                     For
                     inheritance, I made an 'Audio' superclass that the 'Song' class inherits from. I didn't go further
                     to create other forms of audio, but the structure could be used to create other types such as
-                    podcasts and audiobooks. For abstraction, I made an interface called 'Tracklist', that both 'Album'
+                    podcasts and audio books. For abstraction, I made an interface called 'Tracklist', that both 'Album'
                     and 'Playlist' implement. The inheritance of Audio is useful for creating other forms, however the
                     abstraction of Tracklist probably isn't necessary.
                 </li><br>
                 <li><strong>Generics</strong><br>One benefit of unnecessarily abstracting 'Tracklist', was that it
                     forced
-                    me to confront a concept that I never got to grips with at University - generics. In revisting this
+                    me to confront a concept that I never got to grips with at University - generics. In revisiting this
                     concept, it
                     wasn't as complicated as I remember and was quite simple to implement. A
                     Tracklist is built with either a list of Songs (for albums), or a list of tags (for playlists).
@@ -149,7 +149,7 @@
             <br>
 
             <h3>Future Plans</h3>
-            <p>As I mentioned earlier, there are some redundencies and minor issues with the completed codebase. Here are some of them:</p>
+            <p>As I mentioned earlier, there are some redundancies and minor issues with the completed codebase. Here are some of them:</p>
             <ul>
                 <li>There are a few very similar methods in the Library class that could possibly be merged with the use
                     of generics.</li>
@@ -168,11 +168,11 @@
                 <li>More complex playlist creation involving basic logic e.g. tag1 AND tag2 NOT tag3.</li>
                 <li>Add the ability to shuffle a playlist or define a specific order.</li>
                 <li>Add a time-dimension to the data e.g. date song added, date tag added to song/playlist.</li>
-                <li>Add more forms of audio e.g. podcast, audiobook.</li>
+                <li>Add more forms of audio e.g. podcast, audio book.</li>
                 <li>Include pre-defined genres using an enumeration.</li>
                 <li>Implement a GUI to replace the console menu.</li>
             </ul>
-            <p>I'm not sure if I'll spend time including these extra features, but perhaps I will if I revist the
+            <p>I'm not sure if I'll spend time including these extra features, but perhaps I will if I revisit the
                 project to fix the issues mentioned earlier. Overall, this project was a success in that it refreshed my
                 memory of Java, along with some key language-agnostic concepts and design patterns.</p>
             <p><a href="https://github.com/CharlieBignell/Tagger" target="_blank">View the code
