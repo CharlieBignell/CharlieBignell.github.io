@@ -63,51 +63,170 @@
             </div>
 
             <h1>Designing a Dashboard User Interface</h1>
-                <h2>December 2021</h2>
+            <h2>December 2021</h2>
+
+            <p>Following on from the previous project of data science using trading data, I've designed a stock market
+                dashboard user interface.
+                My aim is to spend the next couple of months building a web app using this design, and deploying a web
+                server to host it.
+            </p>
+            <p>
+                I used <a href="https://procreate.art/">Procreate</a> on an iPad to create the initial sketches, and <a
+                    href="https://www.figma.com">Figma</a> to turn these into the dashboard concepts.
+            </p>
+            <p>I've used Procreate casually over the last year, and the sketches were very basic, so this was nothing
+                new to me. I'd heard of Figma, but never used it before this project. Although it's packed full of
+                features, I found
+                it very easy to get started with, so I can see myself using it more in the future. </p>
+            <p>I spent time
+                collecting two types of resource before starting the design process:</p>
+            <ul>
+                <li>A list of ways to evaluate the performance of a stock portfolio e.g. return over time,
+                    diversification, volatility</li>
+                <li>Examples of how to display this data. This came in the form of example graphs I found online, as
+                    well as other dashboard interfaces I may want to use as inspiration</li>
+            </ul>
+
+            <p>I'm no artist, so I spent a lot of time on the latter. I found example pie charts, line graphs etc., as
+                well as basic UI elements such as navigation bars and input forms. Once I had organised all this
+                reference material, I started sketching out the initial designs, which you can see in the following
+                sections. I made minor changes to the design as I started implementing the sketches in Figma, but I
+                altered the original sketches to reflect these changes.</p>
+            <p>One rule I set for myself was that I wanted every visual to have a real utility i.e. I didn't want to
+                just add graphs that would look good but have no real use.</p>
+            <p>I settled on three pages, starting from a high-level overview, to a more detailed table summary.</p>
+
+            <h3>Overview</h3>
+            <p>This page provides the highest-level overview of the users portfolio.</p>
+
+            <p>
+                Given that the only intended end-user is myself, I made every design decision (e.g. dark mode colour
+                scheme) based on my own preference. I went with the typical dashboard structure of a navigation bar at
+                the top, and 'cards' of various dimensions making up the page. I made sure that it would all fit on a
+                single page to avoid the need for any scrolling. This also helps limit the scope, as It limits the
+                number of visualisations. Speaking of which, there a quite a few on this first page:
+            </p>
+
+            <ul>
+                <li><strong>Time selector: </strong>This changes the time frame for the line graph, summary, and tree
+                    map
+                    colours. I originally designed this selector only for the line graph, but I ended
+                    up adding it to other cards, so it made more sense to abstract it out. </li>
+                <li><strong>Line graph: </strong>A basic line graph to show value, deposits and return over
+                    time. There's a dropdown to allow the user to select different moving averages, and a toggle which
+                    would change the graph to compare my performance with the wider market.</li>
+                <li><strong>Summary: </strong>A simple card to summarise the portfolio over the selected time period.
+                    The background is the line graph of return during this period.</li>
+                <li><strong>Market Comparison: </strong>A simple bar graph comparing my return to other markets over the
+                    selected time period.</li>
+                <li><strong>Tree map: </strong>The size of each section represents the portion of my current portfolio
+                    value for each stock. So this won't change as the time selector is used, but the colour (green ->
+                    red colour scale) represents the return over the selected time period. </li>
+                <li><strong>Enter Data: </strong>I originally planned to have an 'Enter Data' button in the header that
+                    would open a new window to enter transactions, but I found some space to put it as a card. This
+                    simplifies the implementation too, as it keeps everything on a single page.</li>
+                <li><strong>Sector value: </strong>This pie chart shows the value of my portfolio taken up by each
+                    sector. Similar to the tree map section sizes, this won't change as the time selector changes. I
+                    didn't leave enough room for a legend, so this card might look different in the implementation.</li>
                 
-                <p>General description</p>
 
-                <h3>Overview</h3>
-                <p>Description of page</p>
-                <div id="imgDiv">
-                    <img class="img_single" src="../img/Overview_wire.PNG">
-                </div>
-                <p id="imgSub"><em>The initial sketch for the overview page</em></p>
-                <br>
-                <div id="imgDiv">
-                    <img class="img_single" src="../img/Overview.png">
-                </div>
-                <p id="imgSub"><em>The final design for the overview page</em></p>
+            </ul>
 
-                <h3>Breakdown</h3>
-                <p>Description of page</p>
-                <div id="imgDiv">
-                    <img class="img_single" src="../img/Breakdown_wire.PNG">
-                </div>
-                <p id="imgSub"><em>The initial sketch for the breakdown page</em></p>
-                <br>
-                <div id="imgDiv">
-                    <img class="img_single" src="../img/Breakdown.png">
-                </div>
-                <p id="imgSub"><em>The final design for the breakdown page</em></p>
+            <p>I had a rule whilst I was designing this page that there shouldn't be any mention of an individual
+                company anywhere on the page. I put this rule in place to ensure that it remained as high-level as
+                possible. Technically I broke this rule with the tree-map, but I'd justify it
+                by the fact that you need all the companies together for the graph to have any utility so it's still a
+                very high-level visualisation. </p>
 
-                <h3>Details</h3>
-                <p>Description of page</p>
-                <div id="imgDiv">
-                    <img class="img_single" src="../img/Details_wire.PNG">
-                </div>
-                <p id="imgSub"><em>The initial sketch for the details page</em></p>
-                <br>
-                <div id="imgDiv">
-                    <img class="img_single" src="../img/Details.png">
-                </div>
-                <p id="imgSub"><em>The final design for the details page</em></p>
+            <br><br>
+            <div id="imgDiv">
+                <img class="img_single" src="../img/Overview_wire.PNG">
+            </div>
+            <p id="imgSub"><em>The initial sketch for the overview page</em></p>
+            <br>
+            <div id="imgDiv">
+                <img class="img_single" src="../img/Overview.png">
+            </div>
+            <p id="imgSub"><em>The final design for the overview page</em></p>
+<br><br>
+            <h3>Breakdown</h3>
+            <p>This is a slightly lower-level view of the data. The aim of this page is to give a similar summary as the previous page, but broken-down by individual company. There are four cards on this page:</p>
+            <ul>
+                <li><strong>Time selector:</strong> This works in the same way as the previous page</li>
+                <li><strong>Summary:</strong> A similar summary card as the previous page, but with a bit more detail on each individual company.
+                    It should
+                    work a bit like a slideshow, where the user can flick through each company.</li>
+                <li><strong>Winners & Losers: </strong>A simple card showing the 'best' and 'worst' performing company
+                    in three
+                    categories - return, volatility, and RSI. This is just a concept, I might end up using different
+                    metrics in the implementation.</li>
+                <li><strong>Area chart:</strong> This chart breaks down the portfolio by company. So you can't see the
+                    overall
+                    value over time (like you can on the overview page), but instead you can see which companies make-up
+                    the portfolio over time. I think this'll be a really interesting graph to look at with my real
+                    portfolio data, but I'm not sure what utility it has, so it may be altered in the
+                    implementation. </li>
+            </ul>
 
-                
+            <br><br>
+            <div id="imgDiv">
+                <img class="img_single" src="../img/Breakdown_wire.PNG">
+            </div>
+            <p id="imgSub"><em>The initial sketch for the breakdown page</em></p>
+            <br>
+            <div id="imgDiv">
+                <img class="img_single" src="../img/Breakdown.png">
+            </div>
+            <p id="imgSub"><em>The final design for the breakdown page</em></p>
+            <br><br>
 
-                <h3>Future Plans</h3>
-                <p>More pages to be designed after implementation</p>
+            <h3>Details</h3>
+            <p>This page is just a single table, broken down by company. There are some example columns below, but my
+                plan is to have a menu button (top right of the table), that when clicked shows a checklist where the
+                user can select which columns to include. I don't want to limit myself by predefining the columns, but
+                if I include all of them at once there'll be a lot of side-scrolling necessary which I wanted to avoid.
+            </p>
+            <br><br>
+            <div id="imgDiv">
+                <img class="img_single" src="../img/Details_wire.PNG">
+            </div>
+            <p id="imgSub"><em>The initial sketch for the details page</em></p>
+            <br>
+            <div id="imgDiv">
+                <img class="img_single" src="../img/Details.png">
+            </div>
+            <p id="imgSub"><em>The final design for the details page</em></p>
 
+            <h3>Future Plans</h3>
+            <p>The next step is to set up the web app and implement these designs. There are some more pages I have in
+                mind, but I thought it'd be best to stick to just these three simple ones first, and then I can design
+                and implement more pages in the future if this goes well. The extra pages include:</p>
+            <ul>
+                <li>
+                    <strong>An even lower-level page, with a table of individual transactions.</strong> This would work
+                    in the same way
+                    as the 'Details' page, so it doesn't really need designing. I'm not sure if such a table is
+                    necessary so I haven't included it here, but I'd probably just add a toggle to the 'Details' page to
+                    switch between company/transaction view.
+                </li>
+                <li>
+                    <strong>A stock screener.</strong>The issue with this is that it would require a live connection to
+                    a data source. My plan is for the back-end data to get refreshed once a day, and so there's no need
+                    to implement any live connections to the Yahoo finance API. Adding a stock screener would complicate
+                    this, so I've left it out for now. Also, there are some advanced stock screeners out there, so I
+                    wouldn't want to produce anything where there's an alternative I'd rather use.
+                </li>
+                <li>
+                    <strong>An 'Action' page.</strong>This was a page in my original designs, that I took out. It was a
+                    page dedicated to informing me of where to take action i.e. where to buy more of, or sell, stocks
+                    that are currently in my portfolio. There would be an RSS feed for relevant news, dates such as
+                    upcoming earnings, and more detailed analysis on past performance. I decided against this page as I
+                    didn't feel comfortable enough with my stock market knowledge to populate it with useful metrics.
+                    I'd be simply guessing at what will be useful, and as I plan to spend more time honing my trading
+                    strategy over the next year, I thought it's be best to leave it until I have a more tried-and-tested
+                    method for evaluating my own portfolio.
+                </li>
+            </ul>
         </div>
 
 
