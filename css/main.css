@@ -51,7 +51,7 @@ p, ol, li {
     max-width: 60%;
     margin: auto;
     background-color: white;
-    padding: 0 60px 60px 60px;
+    padding: 0 60px 0 60px;
     height: 100%;
 }
 
@@ -191,6 +191,21 @@ button:hover:after {
 
 #imgSub{
     text-align: center;
+    justify-content: space-between;
+}
+
+#tooltipImgs{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+#tooltipImgs > img +img{
+    margin-left: 10px;
+}
+
+#tooltipImg{
+    width: 100%;
 }
 
 /* MOBILE */

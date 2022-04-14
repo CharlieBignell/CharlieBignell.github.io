@@ -66,7 +66,7 @@
             <h2>November 2021</h2>
             <p>At the time of writing I work as a data analyst, so I found this project much quicker easier to get to grips with.
                 The goal was to
-                take data I recieved from my stock broker, clean it up, and extract some insights. My intention is that
+                take data I received from my stock broker, clean it up, and extract some insights. My intention is that
                 the next few projects will follow
                 on from each other, so next month I'll design a UI to visualise this data. Then I plan to build a
                 Node/React web
@@ -90,7 +90,7 @@
                 <li><strong>Value</strong>: The amount bought/sold/given in GBP. This value is signed i.e. outgoings are negative
                 </li>
             </ul>
-            <p>Although it contains all the data I need, most of the uesful data is packed into the string contained in
+            <p>Although it contains all the data I need, most of the useful data is packed into the string contained in
                 the 'details' column. This gave me an opportunity to face another area I have always struggled with -
                 regular expressions. They still look like hieroglyphics to me, but at least I now feel confident
                 building
@@ -119,7 +119,7 @@
             <h3>Analyse.pynb</h3>
             <p>The next part was to take this cleaned data, and produce some basic insights. I plan to add more useful
                 outputs in the future, but that'll come after I've designed the UI and done a bit more research into the
-                different ways to analyse portoflio performance. The file reads data in the format exported from
+                different ways to analyse portfolio performance. The file reads data in the format exported from
                 <i>cleanup.ipynb</i> as described above, and plots a basic value chart (+ rolling average curves) along
                 with some basic calculations and summaries printed to the console. It also outputs more detailed summary
                 tables to CSV files
@@ -186,7 +186,7 @@
                 deposits, buys, and sells to be somewhat evenly distributed throughout the date range. My
                 half-and-half solution is both too uniform and too complex. I had another idea to assign weights to
                 'buy', 'sell' and 'deposit', and to alter the weights after each transaction based on the current
-                portoflio e.g. if there was little cash left, increase the chances of generating a deposit by increasing
+                portfolio e.g. if there was little cash left, increase the chances of generating a deposit by increasing
                 it's weight. This solves the issue of uniformity, but was still a bit too complicated for my liking.
             </p>
             <p>I
@@ -206,9 +206,9 @@
             <h3>Future Plans</h3>
             <p>I have a number of improvements in mind, and I spotted some minor issues as I was finalising the code at
                 the end of
-                this project. I plan to work on them when I revist this code later.</p>
+                this project. I plan to work on them when I revisit this code later.</p>
             <ul>
-                <li>To optimse the retrieval of data, I only get historical data from the date of the first buy to the
+                <li>To optimise the retrieval of data, I only get historical data from the date of the first buy to the
                     date of the last sell (if it's not currently being held). However, to optimise this further and add
                     some future-proofing, I should save the historical data locally so I don't need to request the full
                     amount
