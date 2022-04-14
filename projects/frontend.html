@@ -63,18 +63,120 @@
             </div>
 
             <h1>Using React.js to Produce a Dashboard UI</h1>
-            <h2>February 2022</h2>
-            <p>During February, I started to implement the stock market dashboard UI that I designed as part of
-                December's project.</p>
-            <p>This is an application I'm passionate about completing to a high standard - as I intend to use it myself
-                whilst I continue to invest in the stock market. As such, I am cutting no corners, ensuring the front-end
-                looks and functions exactly how I want. I'm really happy with the progress I'm making (I'd guess I'm
-                around 60% complete), but to avoid feeling burnt out with this project, I've decided to extend this
-                month's project to cover March as well.</p>
-            <p>I am on track to complete the UI by the end of March, and at that point I'll post a full description of my work on the front-end</p>
-            
-            <p>This UI is part of the web app I set up in January's project, so you can <a href="https://github.com/CharlieBignell/Stock-App"  target="_blank" rel="noopener">view the code
-                here</a>, but please keep in mind the front-end is still in development.</p>
+            <h2>March/April 2022</h2>
+            <p>During this project, I continued the work on the stock market dashboard that's been the subject of the
+                previous few projects. I used the web app from
+                <a href="../projects/webapp.html" target="_blank" rel="noopener">Project V</a>, and implemented the UI I
+                designed in
+                <a href="../projects/design.html" target="_blank" rel="noopener">Project IV</a>, using
+                <a href="https://reactjs.org/" target="_blank" rel="noopener">React.js</a>.
+            </p>
+            <p>Unfortunately, due to circumstances beyond my control, I've had to put this project on hold. I have yet
+                to complete the entire UI, but I've made good progress that I'm proud of, so I'll showcase here what
+                I've done so far. I'll also talk about the remaining features, that I'll hopefully get around to
+                completing sometime later this year.</p>
+            <h3>Overview Page</h3>
+            <p>The overview page is almost complete, the only missing element is the 'enter data' card in the top right.
+                I left this until last as it's a little more complicated due to the fact that it needs to pass data
+                to the backend and store it properly so it can be access in the future. </p>
+            <br>
+            <div id="imgDiv">
+                <img class="img_single" src="../img/Overview.png">
+            </div>
+            <p id="imgSub"><em>The initial design for the overview page</em></p>
+            <br>
+            <div id="imgDiv">
+                <img class="img_single" src="../img/overview_real.png">
+            </div>
+            <p id="imgSub"><em>The current state of the overview page</em></p>
+            <br><br>
+
+            <p>A few notes about this page:</p>
+            <ul>
+                <li>I took great care to ensure the page scales to different screen sizes. It isn't compatible with
+                    really small screens, e.g. mobile devices, but the cards, text etc. are dynamically sized.</li>
+                <li>I'm really happy with the header. It looks almost identical to the original design, and the 'time in
+                    the market' counter on the right ticks live from the datetime of the first transaction.</li>
+                <li>The time selector works well too, I used a third party component for this, that I'll credit at the
+                    bottom of this page.</li>
+                <li>The line graph works as intended - the time selector changes the x-axis, and the dropdown allows you
+                    to select different moving averages. Switching the toggle in the top right changes the lines to be
+                    the different markets e.g. SPY, NASDAQ etc., however the y-axis is fixed to £, whereas it should
+                    really be % for this view.</li>
+                <li>The treemap sections change colour based on the return in the selected time period. They're all
+                    green in the screenshot because I purposefully chose well-performing stocks and the view spans 10 years.
+                    This is what it looks like in a smaller scale:</li>
+                <br>
+                <div id="imgDiv">
+                    <img class="img_single" src="../img/treemap.png">
+                </div>
+                <br>
+                <li>Also on the treemap, if the box is too thin for the text to fit, the stock ticker is replaced with "..."</li>
+                <li>The summary card is a lot simpler than the original design. I realised the line graph background in
+                    the design was redundant, as it would just match the line graph on the right of it, so this was an
+                    intentional change. However, the card itself is quite boring, and I didn't get around to
+                    implementing a gauge for the volatility, which would be a good feature as the raw 'VIX' value isn't
+                    particularly helpful to see at first glance. Having said all this, all the necessary components are
+                    present</li>
+                <li>The pie chart has two parts, the inner chart represents sectors and the outer represents industries
+                    within those sectors.</li>
+                <li>As the pie chart gets more populated, having a legend (or visible labels as in the design) gets a
+                    bit cluttered. Therefore I made the intentional choice to remove all labels, and rely on tooltips to
+                    inspect what each section represents.</li>
+                <li>Speaking of tooltips, all the graphs on this page have tooltips to give more detailed information.
+                    The tooltips follow the mouse as it moves, here's a few examples of what they look like:</li>
+                <br>
+                <div id="imgDiv">
+                    <img id="tooltipImg" src="../img/tooltips.png">
+                </div>
+                <br><br>
+            </ul>
+            <h3>Breakdown and Details Page</h3>
+            <p>Unfortunately, I only completed the area graph for the breakdown page. It shows the composition of the
+                portfolio over time, and you can hover over to see a tooltip providing the individual values. The next
+                step is to add the stock summary, and the 'winners and losers' cards.
+                I also didn't get around to making the table on the details page.
+            </p>
+            <br><br>
+            <div id="imgDiv">
+                <img class="img_single" src="../img/Breakdown.PNG">
+            </div>
+            <p id="imgSub"><em>The initial design for the breakdown page</em></p>
+            <br>
+            <div id="imgDiv">
+                <img class="img_single" src="../img/breakdown_real.png">
+            </div>
+            <p id="imgSub"><em>The current state of the breakdown page</em></p>
+            <br><br>
+
+            <h3>Future Plans</h3>
+            <p>As I mentioned earlier, there a few missing features from the application, which will take priority when
+                I revisit this project. Part of the reason why these features are missing is because I spent a long time
+                making sure each each feature I implemented was to the highest quality, so there's very little I would
+                change/improve from the existing features, aside from the volatility gauge in the summary card.</p>
+
+            <p><a href="https://github.com/CharlieBignell/Stock-App" target="_blank" rel="noopener">View
+                    the code
+                    here</a></p>
+            <hr>
+
+            <h3>References</h3>
+            <p>
+
+                Multi-select toggle:
+                <a href="https://www.npmjs.com/package/react-multi-toggle" target="_blank" rel="noopener">
+                    'react-multi-toggle'</a>
+                    by <em>danarias</em>
+
+                <br>
+
+                react-dropdown-now:
+                <a href="https://github.com/iambumblehead/react-dropdown-now" target="_blank" rel="noopener">
+                    'react-dropdown-now'</a>
+                    by <em>iambumblehead</em>
+                
+
+            </p>
         </div>
 
 
