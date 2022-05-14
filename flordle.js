@@ -77,7 +77,7 @@ let guessed = false
 function getStatus(letter, i) {
     output = "incorrect"
     if (word[i] == letter) {
-        coutput = "correct"
+        output = "correct"
     } else if (word.includes(letter)) {
         output = "partial"
     }
@@ -264,7 +264,10 @@ function gotAllLetters(i, guessWord) {
 }
 
 function setup() {
-
+    letterSize = 10 - word.length
+    windowWidth = window.innerWidth - (word.length - 1) * gap - padding * 2
+    boxWidth = windowWidth / word.length
+    
     if (word != null) {
         document.getElementById("keyboard").style.visibility = "visible"
         firstGuess = document.createElement("div")
