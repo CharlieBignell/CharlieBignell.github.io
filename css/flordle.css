@@ -119,7 +119,7 @@ p {
 
 .incorrect_key {
     transition: 400ms;
-    background-color: rgb(34, 34, 34);
+    background-color: #3a3a3c;
 }
 
 .correct_key {
