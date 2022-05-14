@@ -119,9 +119,7 @@ async function clickLetter(letter) {
                     currentGuess_word = ""
                     currentGuess_no += 1
                     document.getElementById(`guess_${currentGuess_no}`).style.display = "flex"
-                } else if(currentGuess_no < word.length){
-                    
-                } else {
+                } else if(guessed){
                     complete()
                 }
             }
