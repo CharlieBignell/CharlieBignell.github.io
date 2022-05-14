@@ -4,6 +4,8 @@ let dayMsg = ""
 
 let date = new Date().getDate()
 
+document.body.style.height = `${window.innerHeight}px`
+
 switch(date){
     case 14:
         words = [
@@ -262,6 +264,7 @@ function gotAllLetters(i, guessWord) {
 }
 
 function setup() {
+
     if (word != null) {
         document.getElementById("keyboard").style.visibility = "visible"
         firstGuess = document.createElement("div")
