@@ -263,12 +263,11 @@ function gotAllLetters(i, guessWord) {
 
 }
 
-function setup() {
-    letterSize = 10 - word.length
-    windowWidth = window.innerWidth - (word.length - 1) * gap - padding * 2
-    boxWidth = windowWidth / word.length
-    
+function setup() {    
     if (word != null) {
+        letterSize = 10 - word.length
+        windowWidth = window.innerWidth - (word.length - 1) * gap - padding * 2
+        boxWidth = windowWidth / word.length
         document.getElementById("keyboard").style.visibility = "visible"
         firstGuess = document.createElement("div")
         firstGuess.id = "guess_0"
