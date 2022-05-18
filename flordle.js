@@ -5,12 +5,13 @@ let dayMsg = ""
 let date = new Date().getDate()
 
 document.body.style.height = `${window.innerHeight}px`
-
+console.log(date)
 switch(date){
     case 18:
         words = ["TEST"]
         plans = ["TEST PLAN"]
         dayMsg = "TEST DAY MSG"
+        break;
     case 19:
         words = [
             "DRIVER", 
